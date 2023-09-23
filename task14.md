@@ -1,48 +1,6 @@
-**Работа с массивом без прямой индексацией:**
-1. было:
-```
-for(int i = 0; i < data.length; i ++) {
-    sumSupport += data[i];
-}
-```
-стало:
-```
-for(int number : data) {
-    sumSupport += number;
-}
-```
-2. было:
-```
-for(int j = 0; j < k; j ++) {
-        res += keys[j];
-}
-```
-стало:
-```
-for(int key : keys) {
-        res += key;
-}
-```
-3. было:
-```
-for(int i = 0; i < arrayRoundLength.length; i ++) {
-    boolean shouldIncluded = arrayRoundLength[i] != '0' && arrayRoundLength[i] != ',';
-    if(shouldIncluded) {
-        result += arrayRoundLength[i];
-    }
-}
-```
-стало:
-```
-for(char charOfDigit : arrayRoundLength) {
-    boolean shouldIncluded = charOfDigit != '0' && charOfDigit != ',';
-    if(shouldIncluded) {
-        result += charOfDigit;
-    }
-}
-```
 **Замена на более безопасные структуры данных:**
-4. было:
+
+1. было:
 ```
 public static int odometer(int [] oksana)
   {
@@ -73,7 +31,7 @@ public static int odometer(LinkedList oksana) {
     return distance;
 }
 ```
-5. было:
+2. было:
 ```
 public static int SumOfThe(int N, int [] data) {
     int sumSupport = 0;
@@ -115,5 +73,48 @@ public static int SumOfThe(int N, LinkedList data) {
     }
 
     return sumReal;
+}
+```
+**Работа с массивом без прямой индексации:**
+3. было:
+```
+for(int i = 0; i < data.length; i ++) {
+    sumSupport += data[i];
+}
+```
+стало:
+```
+for(int number : data) {
+    sumSupport += number;
+}
+```
+4. было:
+```
+for(int j = 0; j < k; j ++) {
+        res += keys[j];
+}
+```
+стало:
+```
+for(int key : keys) {
+        res += key;
+}
+```
+5. было:
+```
+for(int i = 0; i < arrayRoundLength.length; i ++) {
+    boolean shouldIncluded = arrayRoundLength[i] != '0' && arrayRoundLength[i] != ',';
+    if(shouldIncluded) {
+        result += arrayRoundLength[i];
+    }
+}
+```
+стало:
+```
+for(char charOfDigit : arrayRoundLength) {
+    boolean shouldIncluded = charOfDigit != '0' && charOfDigit != ',';
+    if(shouldIncluded) {
+        result += charOfDigit;
+    }
 }
 ```
