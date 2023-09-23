@@ -76,6 +76,7 @@ public static int SumOfThe(int N, LinkedList data) {
 }
 ```
 **Работа с массивом без прямой индексации:**
+
 3. было:
 ```
 for(int i = 0; i < data.length; i ++) {
